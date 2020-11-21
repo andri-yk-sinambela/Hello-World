@@ -1,0 +1,86 @@
+#this is my 1/100DaysofCodeChallenges# 
+#I made some simple codes for calculators, temperature converter and money conversion # 
+#This is for a simple addition and average floating number# 
+def addition(num1, num2): 
+    # show the addition formula # 
+    addition_formula = float(num1) + float(num2)
+    print( str(num1) + ' + ', str(num2) + '')
+    print('The result = ', str(addition_formula))
+
+def average (num1, num2, num3): 
+    # show the average formula # 
+    average_formula = float(num1) + float(num2) + float(num3) / 3
+    print(str(num1) + ' + ' + str(num2) + ' + ' + str(num3), end='')
+    print(' = ', str(average_formula))
+   
+# this is for a six international money converter from Indonesian Rupiah (IDR) 
+# Please, let me know if you have another simple code # 
+
+# This is a multi money currency converter # 
+# We converting fix IDR (Indonesian Rupiah) to six international money # 
+# Thoses six money is US Dollar, HK Dollar, Singapore Dollar, Chinesse Yuan and Euro # 
+# First making a class Rupiah 
+class Rupiah(): 
+    def __init__(self, idrrupiah): 
+        self.idrrupiah = idrrupiah
+    
+    def convertUSDollar(self):
+        converting = self.idrrupiah / 14.18260 
+        print(str(self.idrrupiah) + ' IDR = ', str(converting) + ' US Dollar')
+
+    def convertHKD(self):
+        convertingHKD = self.idrrupiah / 1829.51 
+        print(str(self.idrrupiah) + ' IDR = ', str(convertingHKD) + ' HK Dollar')
+    
+    def convertSGD(self): 
+        convertingSGD = self.idrrupiah / 10556.46 
+        print(str(self.idrrupiah) + ' IDR = ', str(convertingSGD) + ' Singapore Dollar')
+    
+    def convertCYN(self): 
+        convertingCYN = self.idrrupiah / 2158.76 
+        print(str(self.idrrupiah) + ' IDR = ', str(convertingCYN) + ' Chinesse Yuan')
+    
+    def convertEUR(self): 
+        convertingEUR = self.idrrupiah / 16815.80 
+        print(str(self.idrrupiah) + ' IDR = ', str(convertingEUR) + ' Euro')
+        
+ # The last code, I made a global temperature converter using class Method # 
+ # again, if y'all have another simple code syntax, feel free to comment and review guys # 
+ # this is for temperature converter # 
+# the three of temperature are Celcius, Fahreinheit and Rankine # 
+# first lets make a class function of Temperature # 
+class Temperature(): 
+    # show first the attributes of Temperatures # 
+    def __init__(self, Celcius, Fahreinheit, Rankine): 
+        self.Celcius = Celcius
+        self.Fahreinheit = Fahreinheit
+        self.Rankine = Rankine
+    
+    # show the function to operated for each attributes # 
+    def convertCelcius (self): 
+        CtoF = self.Celcius * (1.8 + 32)
+        print(' ', str(self.Celcius), 'C equal to ' + str(CtoF) + ' Fahreinheit')
+        CtoK = self.Celcius + 273.15 
+        print(' ', str(self.Celcius), 'C equal to ' + str(CtoK) + ' Kelvin')
+        CtoR = (self.Celcius + 273.15) * 1.8 
+        print(' ', str(self.Celcius) + 'C equal to ' + str(CtoR) + ' Rankine')
+        
+
+    # show the function of Fahreinheit # 
+    def convertFahreinheit(self): 
+        FtoC = (self.Fahreinheit - 32) * 1.8 
+        print(' ',str(self.Fahreinheit) + 'F equal to ' + str(FtoC) + ' Celcius')
+        FtoK = (self.Fahreinheit + 459.67) * 5/9
+        print('', str(self.Fahreinheit) + 'F equal to ' + str(FtoK) + ' Kelvin')
+        FtoR = self.Fahreinheit + 459.67 
+        print(' ', str(self.Fahreinheit) + 'F equal to ' + str(FtoR) + ' Rankine')
+        
+    # show the function of Rankine 
+    def convertRankine(self): 
+        RtoC = (self.Rankine - 491.57) * 5/9 
+        print(' ', str(self.Rankine)  + 'R equal to ' + str(RtoC) + ' Celcius')
+        RtoF = self.Rankine - 459.67 
+        print(' ', str(self.Rankine) + 'R equal to ' + str(RtoF) + ' Fahreinheit')
+        RtoK = self.Rankine * 5/9 
+        print(' ', str(self.Rankine) + 'R equal to ' + str(RtoK) + ' Kelvin')
+
